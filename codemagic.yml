@@ -6,7 +6,8 @@ workflows:
     working_directory: signal_scout
     scripts:
       - flutter --version
-      - flutter create .
+      - flutter clean || true
+      - flutter create --platforms=android .
       - flutter pub get
       - flutter build apk --release
     artifacts:
