@@ -3,7 +3,6 @@ workflows:
     name: Build SignalScout APK
     environment:
       flutter: 3.22.0
-    working_directory: signal_scout
     scripts:
       - flutter --version
       - flutter clean || true
