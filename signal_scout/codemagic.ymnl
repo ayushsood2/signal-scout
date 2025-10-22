@@ -1,0 +1,13 @@
+workflows:
+  build-apk:
+    name: Build SignalScout APK
+    environment:
+      flutter: 3.22.0
+    working_directory: signal_scout
+    scripts:
+      - flutter --version
+      - flutter create .
+      - flutter pub get
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
